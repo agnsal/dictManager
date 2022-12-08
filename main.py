@@ -38,6 +38,7 @@ def test():
     }
     identifier = 'name'
     res = dictManager.collapse(d, identifier)
+    # res = dictManager.collapse(d, identifier, '--')
     pprint(res)
 
 
