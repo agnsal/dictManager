@@ -36,9 +36,12 @@ def test():
             'x': 'ok'
         }
     }
-    identifier = 'name'
-    res = dictManager.collapse(d, identifier)
-    # res = dictManager.collapse(d, identifier, '--')
+    # identifier = 'name'
+    # res = dictManager.collapse(d, identifier)
+    # # res = dictManager.collapse(d, identifier, '--')
+    # pprint(res)
+
+    res = dictManager.toDot(d, '--')
     pprint(res)
 
 

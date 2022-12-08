@@ -17,9 +17,10 @@ def __cleanCollapsed(c, separator):
     outdated = []
     keys = c.keys()
     for k, v in c.items():
-        for item in keys:
-           if item not in outdated and k.startswith(f"{item}{separator}"):
-               outdated.append(item)
+        if k not in outdated:
+            for item in keys:
+               if item not in outdated and k.startswith(f"{item}{separator}"):
+                   outdated.append(item)
     for o in outdated:
         del c[o]
 
