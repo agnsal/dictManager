@@ -50,3 +50,12 @@ def collapse(d, identifier, separator='.'):
     res = __collapse(d, identifier, separator)
     __cleanCollapsed(res, separator)
     return res
+
+
+def toDot(d, separator='.', currPath='', res={}):
+    if not isinstance(d, dict):
+        res[currPath] = d
+    else:
+        for k, v in d.items():
+            toDot(v, separator, k if '' == currPath else f"{currPath}{separator}{k}")
+    return res

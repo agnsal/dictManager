@@ -38,7 +38,10 @@ def test():
     }
     identifier = 'name'
     res = dictManager.collapse(d, identifier)
+    pprint(res)
     # res = dictManager.collapse(d, identifier, '--')
+    print('############################')
+    res = dictManager.toDot(d, '/')
     pprint(res)
 
 
